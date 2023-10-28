@@ -49,23 +49,27 @@ export const TodoWrapper: React.FC = () => {
   };
 
   return (
-    <div className="TodoWrapper">
-      <h1>Get Things Done !</h1>
-      <TodoForm addTodo={addTodo} />
-      {/* display todos */}
-      {todos.map((todo) =>
-        todo.isEditing ? (
-          <EditTodoForm editTodo={editTask} task={todo} key={todo.id} />
-        ) : (
-          <Todo
-            key={todo.id}
-            task={todo}
-            deleteTodo={deleteTodo}
-            editTodo={editTodo}
-            toggleComplete={toggleComplete}
-          />
-        ),
-      )}
+    <div className="bg-purple-100 min-h-screen flex items-center justify-center">
+      <div className="max-w-lg w-full p-6 bg-white rounded shadow-lg">
+        <h1 className="text-2xl font-bold text-purple-600 mb-4">
+          Get Things Done!
+        </h1>
+        <TodoForm addTodo={addTodo} />
+        {/* display todos */}
+        {todos.map((todo) =>
+          todo.isEditing ? (
+            <EditTodoForm editTodo={editTask} task={todo} key={todo.id} />
+          ) : (
+            <Todo
+              key={todo.id}
+              task={todo}
+              deleteTodo={deleteTodo}
+              editTodo={editTodo}
+              toggleComplete={toggleComplete}
+            />
+          ),
+        )}
+      </div>
     </div>
   );
 };

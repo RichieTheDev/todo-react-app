@@ -20,21 +20,23 @@ export const Todo: React.FC<TodoProps> = ({
   toggleComplete,
 }) => {
   return (
-    <div className="Todo">
+    <div className="bg-purple-600 text-white rounded p-3 mb-4 flex justify-between items-center">
       <p
-        className={`${task.completed ? "completed" : "incompleted"}`}
+        className={`${
+          task.completed ? "line-through text-purple-300" : "cursor-pointer"
+        }`}
         onClick={() => toggleComplete(task.id)}
       >
         {task.task}
       </p>
       <div>
         <FontAwesomeIcon
-          className="edit-icon"
+          className="cursor-pointer"
           icon={faPenToSquare}
           onClick={() => editTodo(task.id)}
         />
         <FontAwesomeIcon
-          className="delete-icon"
+          className="cursor-pointer ml-3"
           icon={faTrash}
           onClick={() => deleteTodo(task.id)}
         />
