@@ -26,12 +26,12 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
           type="text"
           value={value}
           onChange={handleInputChange}
-          className="bg-transparent border border-purple-600 rounded p-2 mt-4 mb-6 text-white w-60"
+          className="bg-transparent border border-purple-600 rounded-md p-2 mt-4  text-black w-[75%]"
           placeholder="What is the task today?"
         />
         <button
           type="submit"
-          className="bg-purple-600 text-white rounded p-2 cursor-pointer"
+          className="ml-1 hover:bg-purple-500 bg-purple-600 text-purple-50 rounded-md py-2 px-4 cursor-pointer"
         >
           Add Task
         </button>

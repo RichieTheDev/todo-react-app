@@ -22,17 +22,17 @@ export const EditTodoForm: React.FC<EditTodoFormProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xs mx-auto mb-4">
+    <form onSubmit={handleSubmit} className=" mx-auto mb-4">
       <input
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="border border-purple-500 rounded px-3 py-2 w-full text-white bg-transparent placeholder-gray-400"
+        className="border border-purple-500 rounded-md px-4 py-2 w-[75%] text-black bg-transparent placeholder-gray-400"
         placeholder="Update task"
       />
       <button
         type="submit"
-        className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded cursor-pointer"
+        className="mt-1 bg-purple-500 hover:bg-purple-600 text-purple-50 font-semibold px-4 py-2 rounded-md cursor-pointer"
       >
         Update Task
       </button>
