@@ -25,7 +25,7 @@ export const EditTodoForm: React.FC<EditTodoFormProps> = ({
         className="border border-purple-500 rounded-md px-4 py-2 w-full sm:w-[50%] text-black bg-transparent placeholder-gray-400"
         placeholder="Update task"
       />
-      <button type="submit" className="btn hover-bg-purple-500">
+      <button type="submit" className="ml-1 btn hover-bg-purple-500">
         Update Task
       </button>
     </form>
