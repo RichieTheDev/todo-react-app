@@ -22,7 +22,6 @@ The **Todo List App** is a simple web application built with React that allows u
 
    ```bash
    git clone https://github.com/RichieTheDev/todo-react-app.git
-   cd todo-list-app
    npm install
    npm run dev
    ```
