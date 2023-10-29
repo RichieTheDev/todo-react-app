@@ -13,6 +13,7 @@ const DeleteModal = ({ isOpen, close, deleteAction, text }) => {
         fixed inset-0 flex items-center justify-center bg-gray-200 text-black
         ${isOpen ? "block" : "hidden"}
       `}
+      data-testid="delete-modal"
     >
       <div className="px-6 rounded-lg bg-white flex flex-col shadow-md p-4">
         {/* Close button */}

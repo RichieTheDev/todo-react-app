@@ -112,6 +112,7 @@ export const TodoWrapper: React.FC = () => {
                 className="border-b border-purple-500 outline-none px-4 py-2 mb-4 text-black sm:w-[35vw] w-[75vw] bg-transparent placeholder-gray-400"
                 placeholder="Search tasks"
                 value={search}
+                data-testid="search-input"
                 onChange={(e) => setSearch(e.target.value)}
               />
             )}
@@ -122,12 +123,13 @@ export const TodoWrapper: React.FC = () => {
                 size="2x"
                 onClick={toggleSearch}
                 className="text-purple-600 cursor-pointer"
+                data-testid="search-icon"
               />
             )}
           </div>
         </div>
 
-        <TodoForm addTodo={addTodo} />
+        <TodoForm addTodo={addTodo} data-testid="todo-form" />
         {/* Display filtered todos */}
         {filteredTodos.map((todo) =>
           todo.isEditing ? (
